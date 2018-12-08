@@ -1,0 +1,42 @@
+.light-btn {
+  display: inline-block;
+  padding: 13px 32px;
+  border-radius: 25px;
+  border: 2px solid $main-color;
+  &:hover {
+    background-color: #fff;
+    color: $green-color;
+    border: 2px solid $main-color;
+    transition: .3s all;
+  }
+}
+
+a.light-btn {
+  font-family: $title-font;
+  font-size: 14px;
+  font-weight: 700;
+  color: $main-color;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  padding: 13px 32px;
+  border-radius: 25px;
+  background-color: $green-color;
+  border: 2px solid $green-color;
+  &:hover {
+    background-color: #fff;
+    color: $green-color;
+    border: 2px solid $green-color;
+    transition: .3s all;
+  }
+}
+
+a.learn-more-btn {
+  font-family: $title-font;
+  font-size: 14px;
+  font-weight: 700;
+  color: $main-color;
+}
+
+

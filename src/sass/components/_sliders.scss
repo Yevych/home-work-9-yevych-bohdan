@@ -1,0 +1,129 @@
+//Hero section
+
+.main-content {
+  position: relative;
+  color: $main-color;
+  text-align: center;
+  margin: 175px 0 70px;
+  padding: 0 50px;
+  & h2 {
+    font-family: $title-font;
+    font-size: 60px;
+    font-weight: 200;
+    strong {
+      font-weight: 700;
+    }
+  }
+  & p {
+    font-family: $text-font;
+    font-size: 24px;
+    font-weight: 300;
+  }
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50px;
+  left: 9px;
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  border-right: 2px solid $grey-title;
+  border-top: 2px solid $grey-title;
+  transform: rotate(-135deg);
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50px;
+  right: 9px;
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  border-right: 2px solid $grey-title;
+  border-top: 2px solid $grey-title;
+  transform: rotate(45deg);
+}
+
+a.left-arrow, a.right-arrow {
+  &:hover {
+    border-right: 2px solid $main-color;
+    border-top: 2px solid $main-color;
+    transition: .3s all;
+  }
+}
+
+.slider-button {
+  margin: 60px 0;
+}
+
+.dots {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  max-width: 100px;
+  width: 100%;
+  margin: 0 auto 100px;
+  }
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border: 2px solid $main-color;
+  border-radius: 50%;
+  cursor: pointer;
+  &.active {
+    background-color: $main-color;
+  }
+}
+
+//Testimonials
+
+.testimonials {
+  background: url("../img/testimonials-bg.png") no-repeat center;
+  background-size: cover;
+  padding: 180px 0 140px;
+  &-slider {
+    margin-bottom: 120px;
+  }
+  &-wrapper {
+    text-align: center;
+  }
+  &-author {
+    padding: 0 50px;
+    color: $main-color;
+    font-family: $title-font;
+    font-size: 18px;
+    font-weight: 500;
+    opacity: .3;
+  }
+  &-dots {
+    max-width: 100px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+
+blockquote {
+  position: relative;
+  padding: 0 50px;
+  margin: 30px 0;
+  text-align: center;
+  color: $main-color;
+  font-family: $title-font;
+  font-size: 30px;
+  font-weight: 300;
+  .left-arrow-testimonials {
+    @extend .left-arrow;
+    top: 0;
+  }
+  .right-arrow-testimonials {
+    @extend .right-arrow;
+    top: 0;
+  }
+  span {
+    color: $green-color;
+  }
+}

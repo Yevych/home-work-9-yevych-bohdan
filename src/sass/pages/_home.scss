@@ -1,0 +1,363 @@
+// Main
+
+.main {
+  background: url("../img/main-bg.png") no-repeat center center;
+  background-size: cover;
+  position: relative;
+  &.overlay:before {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+  }
+}
+
+.drop-dawn {
+  position: relative;
+  padding-bottom: 60px;
+  text-align: center;
+  & a:hover:before {
+    opacity: 1;
+    transition: .3s all;
+  }
+  & a:before {
+    position: relative;
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-right: 2px solid $grey-title;
+    border-top: 2px solid $grey-title;
+    transform: rotate(135deg);
+    opacity: .5;
+  }
+}
+
+// About
+
+.about {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.about-icon {
+  display: block;
+  height: 182px;
+  width: 182px;
+  background-color: $circle-color;
+  color: $text-color;
+  font-size: 53px;
+  border-radius: 50%;
+  line-height: 182px;
+  margin: 0 auto;
+  &:hover {
+    background-color: $green-color;
+    color: $main-color;
+    transition: .3s all;
+  }
+}
+
+.about-item {
+  padding: 0 15px;
+  font-size: 18px;
+  h3 {
+    font-family: $title-font;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 80px 0 50px;
+  }
+  p {
+    color: $text-color;
+    font-family: $text-font;
+    font-size: 14px;
+    line-height: 2;
+  }
+}
+
+.about-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px 0 100px;
+}
+
+// Preview
+
+.preview-list li {
+  padding: 160px 0;
+  &:nth-child(2n+1) {
+    background-color: $grey-background;
+  }
+  &:nth-child(2n+1) .preview-item {
+    float: right;
+  }
+  &:nth-child(2n) .preview-item {
+    float: left;
+  }
+}
+
+.preview-item {
+  width: 50%;
+  &-header {
+    color: $grey-title;
+    font-family: $title-font;
+    font-size: 60px;
+    font-weight: 400;
+  }
+  p {
+    color: $text-color;
+    font-family: $text-font;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    margin: 70px 0;
+  }
+}
+
+//Services
+
+.services {
+  padding: 100px 0 50px;
+  background-color: $circle-color;
+  &-title h2 {
+    font-family: $title-font;
+    font-size: 60px;
+    font-weight: 200;
+    color: $text-color;
+  }
+  &-text {
+    color: $text-color;
+    font-family: $text-font;
+    font-size: 18px;
+    line-height: 2;
+  }
+  &-items {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 150px;
+    ul li {
+      position: relative;
+      padding-left: 140px;
+      margin-bottom: 100px;
+      &::before {
+        display: block;
+        height: 94px;
+        width: 94px;
+        background-color: $main-color;
+        border-radius: 50%;
+        line-height: 94px;
+        text-align: center;
+        font-family: "Font Awesome 5 Free", sans-serif;
+        font-weight: 700;
+        position: absolute;
+        font-size: 30px;
+        color: $green-color;
+        left: 0;
+      }
+    }
+  }
+}
+
+.right-col {
+  margin-left: 50px;
+}
+
+.portfolio:before {
+  content: '\f0b1';
+}
+
+.branding:before {
+  content: '\f24d';
+}
+
+.design:before {
+  content: '\f304';
+}
+
+.develop:before {
+  content: '\f135';
+}
+
+//Team
+
+.team {
+  padding-top: 100px;
+  &-presentation ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px;
+    li {
+      flex-basis: 20%;
+      position: relative;
+    }
+    img {
+      width: 100%;
+      vertical-align: middle;
+    }
+    li:hover .team-presentation-name {
+      opacity: 1;
+    }
+  }
+  &-presentation-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: $title-font;
+    font-size: 36px;
+    font-weight: 200;
+    width: 100%;
+    height: 55%;
+    color: $main-color;
+    background: $green-color-opacity;
+    opacity: 0;
+    padding: 45% 0 0;
+    text-align: center;
+    transition: .3s all ease-in;
+  }
+}
+
+//Pricing
+
+.pricing {
+  padding: 100px 0;
+  background-color: $grey-background;
+  &-items {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &-item {
+    background-color: $main-color;
+    width: calc(25% - 15px);
+    box-shadow: 0 0 35px rgba(227, 227, 227, 0.65);
+    border-radius: 5px;
+    margin: 0 10px;
+    &:nth-child(4n+1) {
+      margin-left: 0;
+    }
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+    &:hover {
+      box-shadow: 0 0 35px 0 rgba(0, 0, 0, .15);
+      transform: scale(1.05);
+      transition: .5s all;
+    }
+    a {
+      display: block;
+    }
+
+    &-first-part {
+      padding: 50px 30px;
+      &-count {
+        display: block;
+        font-family: $title-font;
+        font-size: 60px;
+        font-weight: 200;
+        color: $green-color;
+        margin-bottom: 25px;
+      }
+      &-subtitle {
+        display: block;
+        font-family: $text-font;
+        font-size: 18px;
+        font-weight: 400;
+        color: $text-color;
+      }
+    }
+    &-second-part {
+      padding: 50px 30px;
+      border-top: 2px solid $grey-background;
+      &-text {
+        display: block;
+        font-family: $text-font;
+        font-size: 18px;
+        font-weight: 400;
+        color: $text-color;
+        line-height: 2;
+        margin: 0;
+      }
+    }
+    &-footer {
+      background-color: $green-color;
+      padding: 30px 35px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 0 0 5px 5px;
+      &-label {
+        color: $main-color;
+        font-family: $text-font;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+      .icon-cart {
+        color: $main-color;
+      }
+    }
+  }
+}
+
+//Offices
+
+.offices {
+  padding: 100px 0;
+  background: url("../img/map.png") no-repeat center right;
+  background-size: 50%;
+  &-content {
+    width: 50%;
+    h2 {
+      font-family: $title-font;
+      font-size: 60px;
+      font-weight: 200;
+      color: $grey-title;
+    }
+    p {
+      color: $text-color;
+      font-family: $text-font;
+      font-size: 18px;
+      line-height: 2;
+      margin: 70px 0;
+    }
+  }
+  &-map {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+//Template
+
+.template {
+  padding: 270px 0;
+  background: url("../img/template.png") no-repeat center center;
+  background-size: cover;
+  &-header h2 {
+    color: $main-color;
+    font-family: $title-font;
+    font-size: 60px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 100px;
+    & strong {
+      font-weight: 700;
+    }
+  }
+  &-btn {
+    text-align: center;
+  }
+}

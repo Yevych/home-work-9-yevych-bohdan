@@ -1,0 +1,41 @@
+header {
+  padding: 60px 0;
+  position: relative;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-list {
+  & li {
+    display: inline-block;
+    margin-left: 65px;
+    &:first-child {
+      margin-left: 0;
+    }
+    a {
+      color: $main-color;
+      font-family: $text-font;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      &:hover {
+        color: $green-color;
+        transition: .3s all;
+      }
+    }
+  }
+}
+
+.icon-search {
+  font-size: 20px;
+}
